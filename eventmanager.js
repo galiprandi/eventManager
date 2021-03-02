@@ -48,8 +48,9 @@
 
   function eventMapper(event) {
     const { type, target } = event
+    if (!target || !target.attributes) return
     const eventHandleProp = `${eventManagerPrefixed}${type}`
-    const hasProp = !!target?.attributes?.hasOwnProperty(eventHandleProp)
+    const hasProp = !!target.attributes.hasOwnProperty(eventHandleProp)
     if (!hasProp) return
     return target.attributes[eventHandleProp].value
   }

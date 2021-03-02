@@ -1,6 +1,6 @@
 # eventManager
 
-> eventManager es una pequeña librería escrita en javascript diseñada para capturar y manejar eventos del DOM y re asignarles funciones definidas por usted. Es simple y poderosa su pesa solo 1.8Kb.
+> eventManager es una pequeña librería escrita en javascript diseñada para capturar y manejar eventos del DOM y re asignarles funciones definidas por usted. Es simple y poderosa su pesa solo 1Kb.
 
 ## Puede ver una [demo online](https://galiprandi.github.io/eventManager/).
 
