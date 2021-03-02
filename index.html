@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="eventManager.js" defer></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>eventManager</title>
+    <link
+      rel="stylesheet"
+      href="https://galiprandi.github.io/css-toolset.css/css-toolset.css"
+    />
+    <style>
+      body {
+        text-align: center;
+      }
+      li {
+        cursor: pointer;
+      }
+    </style>
+    <script>
+      function handleClick() {
+        console.log(event.target.tagName)
+        alert(`Click en: ${event.target.tagName}`)
+      }
+      function handleSelection() {
+        alert(`Has seleccionado: ${event.target.value}`)
+      }
+      function handleKey() {
+        console.log(`Se presionó la tecla: ${event.key}`)
+        if (event.key === "F2") alert("¡ Tecla F2 presionada !")
+      }
+      function handleSubmit() {
+        event.preventDefault()
+        alert(
+          `Se ejecutó en evento submit del formulario #${event.target.id} y se previno el comportamiento por defecto.`
+        )
+      }
+
+      function copyTextToClipboard() {
+        console.log(event.target.textContent)
+        copyToClipboard(event.target.textContent)
+        alert("Se ha copiado el texto al porta papeles")
+      }
+
+      function clickOnList() {
+        const el = event.target
+        el.style.textDecoration = el.style.textDecoration ? "" : "line-through"
+        el.classList.toggle("Inv")
+      }
+
+      function copyToClipboard(textToCopy) {
+        try {
+          let el = document.createElement("textarea")
+          el.value = textToCopy
+          document.body.appendChild(el)
+          el.select()
+          document.execCommand("copy")
+          document.body.removeChild(el)
+          console.info(`Text copied: ${textToCopy}`)
+        } catch (error) {
+          console.error(error)
+        }
+      }
+    </script>
+  </head>
+  <body emKeyup="handleKey">
+    <h1 emClick="handleClick" class="title">eventManager</h1>
+    <blockquote emClick="copyTextToClipboard" id="welcome">
+      <b>eventManager</b> es una pequeña librería escrita en javascript diseñada
+      para capturar y manejar eventos del DOM y re asignarles funciones
+      definidas por usted.
+    </blockquote>
+    <p>(haga click en el texto de arriba para copiar el portapapeles)</p>
+    <hr class="Sep" />
+    <p class="Sol Inv Out" id="keyPressFunction">
+      eventManager está capturando las teclas que presionas. Puedes ver la
+      salida revisando la consola o presionando la tecla F2.
+    </p>
+    <hr class="Sep" />
+    <button emClick="handleClick">Click me !</button>
+    <hr class="Sep" />
+    <select name="opciones" id="opciones" emChange="handleSelection">
+      <option value="Opción A">Opción A</option>
+      <option value="Opción B">Opción B</option>
+      <option value="Opción C">Opción C</option>
+      <option value="Opción D">Opción D</option>
+    </select>
+    <hr class="Sep" />
+    <ol>
+      <h1 class="title">Lista de Tareas</h1>
+      <li emClick="clickOnList">Revisar errores</li>
+      <li emClick="clickOnList">Controlar compatibilidad</li>
+      <li emClick="clickOnList">Agregar funciones</li>
+      <li emClick="clickOnList">Mejorar la documentación</li>
+    </ol>
+    <small>(haga click en las tareas)</small>
+    <hr class="Sep" />
+    <form id="MyForm" emSubmit="handleSubmit">
+      <fieldset>
+        <input type="text" value />
+        <hr class="Sep" />
+        <button type="submit" class="Sol">Enviar</button>
+      </fieldset>
+    </form>
+    <p>Desarrolado por Germán Aliprandi</p>
+  </body>
+</html>

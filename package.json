@@ -1,0 +1,17 @@
+{
+  "name": "eventmanager",
+  "version": "0.0.1",
+  "description": "eventManager es una pequeña librería escrita en javascript diseñada para capturar y manejar eventos del DOM y re asignarles funciones definidas por usted.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/galiprandi/eventManager.git"
+  },
+  "author": "German Aliprandi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/galiprandi/eventManager/issues"
+  },
+  "homepage": "https://github.com/galiprandi/eventManager#readme"
+}
