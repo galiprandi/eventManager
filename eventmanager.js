@@ -35,9 +35,8 @@
   }
 
   function executeActions(actions) {
-    actionsArr = actions.split("|")
     actions.split("|").forEach((fn) => {
-      if (eventManagerDebugMode) console.log(`Call function ${fn}()`)
+      if (eventManagerDebugMode) console.log(`Calling function ${fn}()`)
       if (existFunction(fn)) window[fn]()
     })
   }
