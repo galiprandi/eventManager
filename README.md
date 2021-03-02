@@ -71,10 +71,14 @@ También puede disparar más de una función concatenando sus nombres con el sep
 
 ## ToDo
 
-[ ] Chequear compatibilidad y solucionar posibles errores.
+- [ ] Chequear compatibilidad y solucionar posibles errores.
 
-[ ] Agregar funciones
+- [ ] Agregar funciones
 
-[ ] Traducir la documentación
+- [x] Escribir documentación
+
+- [ ] Mejorar la documentación
+
+- [ ] Traducir la documentación
 
 Autor: Germán Aliprandi
