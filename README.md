@@ -13,7 +13,7 @@
 ```html
 <head>
   <script
-    src="https://galiprandi.github.io/eventManager/eventManager.js"
+    src="https://galiprandi.github.io/eventManager/eventManager.min.js"
     defer
   ></script>
 </head>
