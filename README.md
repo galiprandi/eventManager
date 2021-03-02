@@ -19,9 +19,9 @@
 </head>
 ```
 
-#### 2) Capture los eventos que desea manejar asignando atributos a los elementos HTML. Puede usar cualquier elemento del DOM como se muestra en los siguientes ejemplos.
+#### 2) Asigne los eventos que desea manejar especificando atributos en los elementos HTML. Puede usar cualquier elemento del DOM como se muestra en los siguientes ejemplos y puede capturar cualquier evento disponible en el navegador.
 
-Los nombres de los eventos llevan un prefijo 'em' para evitar colisiones con otras librerías.
+Los nombres de los eventos llevan un prefijo 'em' para evitar colisiones con otras librerías. El: emClick captura el evento 'click'.
 
 ```html
 <body emKeyup="handleKeyUp">
@@ -35,7 +35,7 @@ Los nombres de los eventos llevan un prefijo 'em' para evitar colisiones con otr
 </body>
 ```
 
-#### 3) Defina las funciones y las acciones a realizar en cada evento capturado.
+#### 3) Defina las funciones y las acciones a realizar con cada evento capturado. Recuerde que puede asignar mas de una función por evento.
 
 ```javascript
 <script>
@@ -64,10 +64,12 @@ También puede disparar más de una función concatenando sus nombres con el sep
 <button emClick="fnUno|fnDos|fnTres">Botón de Logging</button>
 ```
 
-### ToDo
+## ToDo
 
 [ ] Chequear compatibilidad y solucionar posibles errores.
 
 [ ] Agregar funciones
 
 [ ] Traducir la documentación
+
+Autor: Germán Aliprandi
