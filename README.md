@@ -6,9 +6,9 @@
 
 ---
 
-## Modo de uso:
+### Modo de uso:
 
-### 1) Importe la librería Javascript en su página, automáticamente se iniciará y revisará los todos los eventos que sucedan en el documento.
+#### 1) Importe la librería Javascript en su página, automáticamente se iniciará y capturará todos los eventos que sucedan en el DOM.
 
 ```html
 <head>
@@ -19,7 +19,7 @@
 </head>
 ```
 
-### 2) Capture los eventos que desea manejar. Puede usar cualquier elemento del DOM como se muestra en los siguientes ejemplos.
+#### 2) Capture los eventos que desea manejar asignando atributos a los elementos HTML. Puede usar cualquier elemento del DOM como se muestra en los siguientes ejemplos.
 
 Los nombres de los eventos llevan un prefijo 'em' para evitar colisiones con otras librerías.
 
@@ -35,7 +35,7 @@ Los nombres de los eventos llevan un prefijo 'em' para evitar colisiones con otr
 </body>
 ```
 
-### 3) Defina las funciones y las acciones a realizar en cada evento capturado.
+#### 3) Defina las funciones y las acciones a realizar en cada evento capturado.
 
 ```javascript
 <script>
@@ -64,7 +64,7 @@ También puede disparar más de una función concatenando sus nombres con el sep
 <button emClick="fnUno|fnDos|fnTres">Botón de Logging</button>
 ```
 
-## ToDo
+### ToDo
 
 [ ] Chequear compatibilidad y solucionar posibles errores.
 
