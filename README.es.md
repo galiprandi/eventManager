@@ -81,6 +81,10 @@ También puede disparar más de una función concatenando sus nombres con el sep
 
 - [ ] Mejorar la documentación
 
-- [ ] Traducir la documentación
+- [x] Traducir la documentación
 
 Autor: Germán Aliprandi
+
+## Agradecimiento especial a estos colaboradores:
+
+[Benjamín Lavena](https://github.com/zmasterar)
