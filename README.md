@@ -5,15 +5,17 @@
 
 # eventManager
 
-> <b>eventManager</b> es una pequeña librería escrita en javascript diseñada para capturar y manejar eventos del DOM y re asignarles funciones definidas por usted. Es simple y poderosa y solo pesa solo 1Kb.
+> <b>eventManager</b> is a small library written in JavaScript, designed to capture and manage DOM events, and to reassign them functions defined by you. It's simple yet powerful and it only weights 1Kb.
 
-## Puede ver una [demo online](https://galiprandi.github.io/eventManager/).
+You can also read it in: [Español](README.es.md)
+
+## You can see a [demo online](https://galiprandi.github.io/eventManager/).
 
 ---
 
-### Modo de uso:
+### How to use:
 
-#### 1) Importe la librería Javascript en su página, automáticamente se iniciará y capturará todos los eventos que sucedan en el DOM.
+#### 1) Import the JavaScript library in you page, it will automatically initialize and it will capture every DOM event.
 
 ```html
 <head>
@@ -24,61 +26,60 @@
 </head>
 ```
 
-#### 2) Asigne los eventos que desea manejar especificando atributos en los elementos HTML. Puede usar cualquier elemento del DOM como se muestra en los siguientes ejemplos y puede capturar cualquier evento disponible en el navegador.
+#### 2) Assign the events that you wish to manage, specifying them in HTML attributes. You can use any DOM element as is shown in the following examples, and you can capture any event available in the web browser.
 
-Los nombres de los eventos llevan un prefijo 'em' para evitar colisiones con otras librerías. El: emClick captura el evento 'click'.
+The event names must be prefixed with 'em' so to avoid name collisions with other libraries. E.g., `emClick` captures the 'click' event.
 
 ```html
 <body emKeyup="handleKeyUp">
   <img emClick="handleClick" src="imagen.jpg" />
 
-  <h1 emClick="handleClick">Este es un título</h1>
+  <h1 emClick="handleClick">This is a title</h1>
 
-  <button emClick="handleClick">Botón de Logging</button>
+  <button emClick="handleClick">Login button</button>
 
-  <span emClick="handleClick">Texto sencillo</span>
+  <span emClick="handleClick">Simple text</span>
 </body>
 ```
 
-#### 3) Defina las funciones y las acciones a realizar con cada evento capturado. Recuerde que puede asignar mas de una función por evento.
+#### 3) Define the functions and the actions the captured events must realize.
 
 ```javascript
 <script>
   /**************************************************************
-    Puede acceder el evento desde la variable event.
-    O al elemento que disparó en evento accediendo a event.target
+    You can access the event itself through the `event` variable. And you can access the node element that triggered the event through `event.target`
   **************************************************************/
 
   function handleClick(){
-    alert(`Click en: ${event.target.tagName}`)
+    alert(`${event.target.tagName} clicked`)
     console.log(event)
   }
 
   function handleKeyUp(){
     if (event.key === "F2") {
-      // Hacer algo
+      // Do something
     }
 
   }
 </script>
 ```
 
-También puede disparar más de una función concatenando sus nombres con el separador |. como se muestra en el siguiente ejemplo:
+You can trigger more than one function concatenating their names with the pipe symbol `|` as is shown in the following example:
 
 ```html
-<button emClick="fnUno|fnDos|fnTres">Botón de Logging</button>
+<button emClick="fnOne|fnTwo|fnThree">Login button</button>
 ```
 
 ## ToDo
 
-- [ ] Chequear compatibilidad y solucionar posibles errores.
+- [ ] Check compatibility and fix possible bugs.
 
-- [ ] Agregar funciones
+- [ ] Add features.
 
-- [x] Escribir documentación
+- [x] Write documentation.
 
-- [ ] Mejorar la documentación
+- [ ] Improve documentation.
 
-- [ ] Traducir la documentación
+- [ ] Translate documentation.
 
-Autor: Germán Aliprandi
+Author: Germán Aliprandi
