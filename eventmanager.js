@@ -1,5 +1,5 @@
 ;(() => {
-  eventManagerDebugMode = false
+  eventManagerDebugMode = true
 
   // Prefix to event names
   const eventManagerPrefixed = "em"
@@ -35,7 +35,11 @@
   }
 
   function executeActions(actions) {
-    actions.split("|").forEach((fn) => {
+    const arrActions = actions.trim().split(" ")
+
+    if (arrActions.length < 1) return
+
+    arrActions.forEach((fn) => {
       if (eventManagerDebugMode) console.log(`Calling function ${fn}()`)
       if (existFunction(fn)) window[fn]()
     })

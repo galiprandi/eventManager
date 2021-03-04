@@ -64,7 +64,7 @@ The event names must be prefixed with 'em' so to avoid name collisions with othe
 </script>
 ```
 
-You can trigger more than one function concatenating their names with the pipe symbol `|` as is shown in the following example:
+You can trigger more than one function if you declare them separated by a space as is shown in the following example:
 
 ```html
 <button emClick="fnOne|fnTwo|fnThree">Login button</button>

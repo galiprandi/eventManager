@@ -24,12 +24,19 @@
       }
     </style>
     <script>
+      function handleClickTitle1() {
+        alert(
+          "In this action it called two functions, this is the first function"
+        )
+      }
+      function handleClickTitle2() {
+        alert("And this is the second function")
+      }
       function handleClick() {
-        console.log(event.target.tagName)
-        alert(`Click en: ${event.target.tagName}`)
+        alert(`Click on element: ${event.target.tagName}`)
       }
       function handleSelection() {
-        alert(`Has seleccionado: ${event.target.value}`)
+        alert(`Your Selection is: ${event.target.value}`)
       }
       function handleKey() {
         console.log(`Se presionó la tecla: ${event.key}`)
@@ -70,7 +77,9 @@
     </script>
   </head>
   <body emKeyup="handleKey">
-    <h1 emClick="handleClick" class="title">eventManager</h1>
+    <h1 emClick="handleClickTitle1 handleClickTitle2" class="title">
+      eventManager
+    </h1>
     <blockquote emClick="copyTextToClipboard" id="welcome">
       <b>eventManager</b> es una pequeña librería escrita en javascript diseñada
       para capturar y manejar eventos del DOM y re asignarles funciones

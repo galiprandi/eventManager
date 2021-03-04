@@ -65,10 +65,10 @@ Los nombres de los eventos llevan un prefijo 'em' para evitar colisiones con otr
 </script>
 ```
 
-También puede disparar más de una función concatenando sus nombres con el separador |. como se muestra en el siguiente ejemplo:
+También puede disparar más de una función si las declara separas por un espacio, como se muestra en el siguiente ejemplo:
 
 ```html
-<button emClick="fnUno|fnDos|fnTres">Botón de Logging</button>
+<button emClick="fnUno fnDos fnTres">Botón de Logging</button>
 ```
 
 ## ToDo
