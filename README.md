@@ -82,8 +82,6 @@ You can trigger more than one function concatenating their names with the pipe s
 
 - [x] Translate documentation.
 
-Author: Germán Aliprandi
-
 ## Special thanks to these collaborators:
 
 [Benjamín Lavena](https://github.com/zmasterar)

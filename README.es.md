@@ -83,8 +83,6 @@ También puede disparar más de una función concatenando sus nombres con el sep
 
 - [x] Traducir la documentación
 
-Autor: Germán Aliprandi
-
 ## Agradecimiento especial a estos colaboradores:
 
 [Benjamín Lavena](https://github.com/zmasterar)
