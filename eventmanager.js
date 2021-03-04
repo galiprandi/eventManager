@@ -1,5 +1,5 @@
 ;(() => {
-  eventManagerDebugMode = true
+  eventManagerDebugMode = false
 
   // Prefix to event names
   const eventManagerPrefixed = "em"
