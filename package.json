@@ -4,7 +4,7 @@
   "description": "eventManager es una pequeña librería escrita en javascript diseñada para capturar y manejar eventos del DOM y re asignarles funciones definidas por usted. Es simple y poderosa y solo pesa solo 1Kb.",
   "main": "index.js",
   "scripts": {
-    "Minify": "uglifyjs eventmanager.js --compress --source-map -o eventmanager.min.js"
+    "tswatch": "tsc -w"
   },
   "repository": {
     "type": "git",

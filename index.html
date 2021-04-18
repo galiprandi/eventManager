@@ -7,14 +7,11 @@
     <script src="./eventmanager.js" defer></script>
     <link rel="shortcut icon" href="logo.svg" type="image/x-icon" />
     <title>eventManager</title>
-    <link
-      rel="stylesheet"
-      href="https://galiprandi.github.io/css-toolset.css/css-toolset.css"
-    />
+    <link rel="stylesheet" href="https://galiprandi.github.io/css-toolset.css/css-toolset.css" />
     <style>
       :root {
-        --text: #262626;
-        --hover: tomato;
+        --text: #2f2f2f;
+        --hover: #8f0075;
       }
       body {
         text-align: center;
@@ -25,12 +22,10 @@
     </style>
     <script>
       function handleClickTitle1() {
-        alert(
-          "In this action it called two functions, this is the first function"
-        )
+        alert('In this action it called two functions, this is the first function')
       }
       function handleClickTitle2() {
-        alert("And this is the second function")
+        alert('And this is the second function')
       }
       function handleClick() {
         alert(`Click on element: ${event.target.tagName}`)
@@ -40,7 +35,7 @@
       }
       function handleKey() {
         console.log(`Se presionó la tecla: ${event.key}`)
-        if (event.key === "F2") alert("¡ Tecla F2 presionada !")
+        if (event.key === 'F2') alert('¡ Tecla F2 presionada !')
       }
       function handleSubmit() {
         event.preventDefault()
@@ -52,22 +47,22 @@
       function copyTextToClipboard() {
         console.log(event.target.textContent)
         copyToClipboard(event.target.textContent)
-        alert("Se ha copiado el texto al porta papeles")
+        alert('Se ha copiado el texto al porta papeles')
       }
 
       function clickOnList() {
         const el = event.target
-        el.style.textDecoration = el.style.textDecoration ? "" : "line-through"
-        el.classList.toggle("Inv")
+        el.style.textDecoration = el.style.textDecoration ? '' : 'line-through'
+        el.classList.toggle('Inv')
       }
 
       function copyToClipboard(textToCopy) {
         try {
-          let el = document.createElement("textarea")
+          let el = document.createElement('textarea')
           el.value = textToCopy
           document.body.appendChild(el)
           el.select()
-          document.execCommand("copy")
+          document.execCommand('copy')
           document.body.removeChild(el)
           console.info(`Text copied: ${textToCopy}`)
         } catch (error) {
@@ -77,19 +72,16 @@
     </script>
   </head>
   <body emKeyup="handleKey">
-    <h1 emClick="handleClickTitle1 handleClickTitle2" class="title">
-      eventManager
-    </h1>
+    <h1 emClick="handleClickTitle1 handleClickTitle2" class="title">eventManager</h1>
     <blockquote emClick="copyTextToClipboard" id="welcome">
-      <b>eventManager</b> es una pequeña librería escrita en javascript diseñada
-      para capturar y manejar eventos del DOM y re asignarles funciones
-      definidas por usted. Es simple y poderosa y solo pesa solo 1Kb.
+      <b>eventManager</b> es una pequeña librería escrita en javascript diseñada para capturar y manejar eventos del DOM
+      y re asignarles funciones definidas por usted. Es simple y poderosa y solo pesa solo 1Kb.
     </blockquote>
     <p>(haga click en el texto de arriba para copiar el portapapeles)</p>
     <hr class="Sep" />
     <p class="Sol Inv Out" id="keyPressFunction">
-      eventManager está capturando las teclas que presionas. Puedes ver la
-      salida revisando la consola o presionando la tecla F2.
+      eventManager está capturando las teclas que presionas. Puedes ver la salida revisando la consola o presionando la
+      tecla F2.
     </p>
     <hr class="Sep" />
     <button emClick="handleClick">Click me !</button>
