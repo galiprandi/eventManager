@@ -1,8 +1,8 @@
 {
   "name": "eventmanager",
-  "version": "0.2.0",
-  "description": "eventManager es una pequeña librería escrita en javascript diseñada para capturar y manejar eventos del DOM y re asignarles funciones definidas por usted. Es simple y poderosa y solo pesa solo 1Kb.",
-  "main": "index.js",
+  "version": "2.1.1",
+  "description": "eventManager capture and manage DOM events.",
+  "main": "index.html",
   "scripts": {
     "tswatch": "tsc -w"
   },
